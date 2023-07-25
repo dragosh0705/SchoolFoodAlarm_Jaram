@@ -99,9 +99,9 @@
 		D5EA7A082A6F6586007A4727 /* Money */ = {
 			isa = PBXGroup;
 			children = (
+				D5EA7A392A6F6596007A4727 /* Home */,
 				D5EA7A092A6F6586007A4727 /* AppDelegate.swift */,
 				D5EA7A0B2A6F6586007A4727 /* SceneDelegate.swift */,
-				D5EA7A0D2A6F6586007A4727 /* ViewController.swift */,
 				D5EA7A0F2A6F6586007A4727 /* Main.storyboard */,
 				D5EA7A122A6F6587007A4727 /* Assets.xcassets */,
 				D5EA7A142A6F6587007A4727 /* LaunchScreen.storyboard */,
@@ -125,6 +125,38 @@
 				D5EA7A2C2A6F6587007A4727 /* MoneyUITestsLaunchTests.swift */,
 			);
 			path = MoneyUITests;
+			sourceTree = "<group>";
+		};
+		D5EA7A392A6F6596007A4727 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D5EA7A3C2A6F65B9007A4727 /* Model */,
+				D5EA7A3B2A6F65B3007A4727 /* View */,
+				D5EA7A3A2A6F65A6007A4727 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D5EA7A3A2A6F65A6007A4727 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5EA7A0D2A6F6586007A4727 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5EA7A3B2A6F65B3007A4727 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5EA7A3C2A6F65B9007A4727 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

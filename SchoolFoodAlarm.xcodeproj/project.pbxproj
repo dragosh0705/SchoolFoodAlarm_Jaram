@@ -13,9 +13,9 @@
 		D5EA7A112A6F6586007A4727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EA7A0F2A6F6586007A4727 /* Main.storyboard */; };
 		D5EA7A132A6F6587007A4727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5EA7A122A6F6587007A4727 /* Assets.xcassets */; };
 		D5EA7A162A6F6587007A4727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EA7A142A6F6587007A4727 /* LaunchScreen.storyboard */; };
-		D5EA7A212A6F6587007A4727 /* MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A202A6F6587007A4727 /* MoneyTests.swift */; };
-		D5EA7A2B2A6F6587007A4727 /* MoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2A2A6F6587007A4727 /* MoneyUITests.swift */; };
-		D5EA7A2D2A6F6587007A4727 /* MoneyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2C2A6F6587007A4727 /* MoneyUITestsLaunchTests.swift */; };
+		D5EA7A212A6F6587007A4727 /* SchoolFoodAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A202A6F6587007A4727 /* SchoolFoodAlarmTests.swift */; };
+		D5EA7A2B2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2A2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift */; };
+		D5EA7A2D2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D5EA7A062A6F6586007A4727 /* Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Money.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5EA7A062A6F6586007A4727 /* SchoolFoodAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolFoodAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EA7A092A6F6586007A4727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5EA7A0B2A6F6586007A4727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D5EA7A0D2A6F6586007A4727 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,11 +44,11 @@
 		D5EA7A122A6F6587007A4727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5EA7A152A6F6587007A4727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5EA7A172A6F6587007A4727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5EA7A1C2A6F6587007A4727 /* MoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5EA7A202A6F6587007A4727 /* MoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTests.swift; sourceTree = "<group>"; };
-		D5EA7A262A6F6587007A4727 /* MoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5EA7A2A2A6F6587007A4727 /* MoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyUITests.swift; sourceTree = "<group>"; };
-		D5EA7A2C2A6F6587007A4727 /* MoneyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D5EA7A1C2A6F6587007A4727 /* SchoolFoodAlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolFoodAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5EA7A202A6F6587007A4727 /* SchoolFoodAlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmTests.swift; sourceTree = "<group>"; };
+		D5EA7A262A6F6587007A4727 /* SchoolFoodAlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolFoodAlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5EA7A2A2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITests.swift; sourceTree = "<group>"; };
+		D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +79,9 @@
 		D5EA79FD2A6F6586007A4727 = {
 			isa = PBXGroup;
 			children = (
-				D5EA7A082A6F6586007A4727 /* Money */,
-				D5EA7A1F2A6F6587007A4727 /* MoneyTests */,
-				D5EA7A292A6F6587007A4727 /* MoneyUITests */,
+				D5EA7A082A6F6586007A4727 /* SchoolFoodAlarm */,
+				D5EA7A1F2A6F6587007A4727 /* SchoolFoodAlarmTests */,
+				D5EA7A292A6F6587007A4727 /* SchoolFoodAlarmUITests */,
 				D5EA7A072A6F6586007A4727 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,14 +89,14 @@
 		D5EA7A072A6F6586007A4727 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5EA7A062A6F6586007A4727 /* Money.app */,
-				D5EA7A1C2A6F6587007A4727 /* MoneyTests.xctest */,
-				D5EA7A262A6F6587007A4727 /* MoneyUITests.xctest */,
+				D5EA7A062A6F6586007A4727 /* SchoolFoodAlarm.app */,
+				D5EA7A1C2A6F6587007A4727 /* SchoolFoodAlarmTests.xctest */,
+				D5EA7A262A6F6587007A4727 /* SchoolFoodAlarmUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D5EA7A082A6F6586007A4727 /* Money */ = {
+		D5EA7A082A6F6586007A4727 /* SchoolFoodAlarm */ = {
 			isa = PBXGroup;
 			children = (
 				D5EA7A392A6F6596007A4727 /* Home */,
@@ -107,24 +107,24 @@
 				D5EA7A142A6F6587007A4727 /* LaunchScreen.storyboard */,
 				D5EA7A172A6F6587007A4727 /* Info.plist */,
 			);
-			path = Money;
+			path = SchoolFoodAlarm;
 			sourceTree = "<group>";
 		};
-		D5EA7A1F2A6F6587007A4727 /* MoneyTests */ = {
+		D5EA7A1F2A6F6587007A4727 /* SchoolFoodAlarmTests */ = {
 			isa = PBXGroup;
 			children = (
-				D5EA7A202A6F6587007A4727 /* MoneyTests.swift */,
+				D5EA7A202A6F6587007A4727 /* SchoolFoodAlarmTests.swift */,
 			);
-			path = MoneyTests;
+			path = SchoolFoodAlarmTests;
 			sourceTree = "<group>";
 		};
-		D5EA7A292A6F6587007A4727 /* MoneyUITests */ = {
+		D5EA7A292A6F6587007A4727 /* SchoolFoodAlarmUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D5EA7A2A2A6F6587007A4727 /* MoneyUITests.swift */,
-				D5EA7A2C2A6F6587007A4727 /* MoneyUITestsLaunchTests.swift */,
+				D5EA7A2A2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift */,
+				D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */,
 			);
-			path = MoneyUITests;
+			path = SchoolFoodAlarmUITests;
 			sourceTree = "<group>";
 		};
 		D5EA7A392A6F6596007A4727 /* Home */ = {
@@ -162,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5EA7A052A6F6586007A4727 /* Money */ = {
+		D5EA7A052A6F6586007A4727 /* SchoolFoodAlarm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5EA7A302A6F6587007A4727 /* Build configuration list for PBXNativeTarget "Money" */;
+			buildConfigurationList = D5EA7A302A6F6587007A4727 /* Build configuration list for PBXNativeTarget "SchoolFoodAlarm" */;
 			buildPhases = (
 				D5EA7A022A6F6586007A4727 /* Sources */,
 				D5EA7A032A6F6586007A4727 /* Frameworks */,
@@ -174,14 +174,14 @@
 			);
 			dependencies = (
 			);
-			name = Money;
+			name = SchoolFoodAlarm;
 			productName = Money;
-			productReference = D5EA7A062A6F6586007A4727 /* Money.app */;
+			productReference = D5EA7A062A6F6586007A4727 /* SchoolFoodAlarm.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D5EA7A1B2A6F6587007A4727 /* MoneyTests */ = {
+		D5EA7A1B2A6F6587007A4727 /* SchoolFoodAlarmTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5EA7A332A6F6587007A4727 /* Build configuration list for PBXNativeTarget "MoneyTests" */;
+			buildConfigurationList = D5EA7A332A6F6587007A4727 /* Build configuration list for PBXNativeTarget "SchoolFoodAlarmTests" */;
 			buildPhases = (
 				D5EA7A182A6F6587007A4727 /* Sources */,
 				D5EA7A192A6F6587007A4727 /* Frameworks */,
@@ -192,14 +192,14 @@
 			dependencies = (
 				D5EA7A1E2A6F6587007A4727 /* PBXTargetDependency */,
 			);
-			name = MoneyTests;
+			name = SchoolFoodAlarmTests;
 			productName = MoneyTests;
-			productReference = D5EA7A1C2A6F6587007A4727 /* MoneyTests.xctest */;
+			productReference = D5EA7A1C2A6F6587007A4727 /* SchoolFoodAlarmTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D5EA7A252A6F6587007A4727 /* MoneyUITests */ = {
+		D5EA7A252A6F6587007A4727 /* SchoolFoodAlarmUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5EA7A362A6F6587007A4727 /* Build configuration list for PBXNativeTarget "MoneyUITests" */;
+			buildConfigurationList = D5EA7A362A6F6587007A4727 /* Build configuration list for PBXNativeTarget "SchoolFoodAlarmUITests" */;
 			buildPhases = (
 				D5EA7A222A6F6587007A4727 /* Sources */,
 				D5EA7A232A6F6587007A4727 /* Frameworks */,
@@ -210,9 +210,9 @@
 			dependencies = (
 				D5EA7A282A6F6587007A4727 /* PBXTargetDependency */,
 			);
-			name = MoneyUITests;
+			name = SchoolFoodAlarmUITests;
 			productName = MoneyUITests;
-			productReference = D5EA7A262A6F6587007A4727 /* MoneyUITests.xctest */;
+			productReference = D5EA7A262A6F6587007A4727 /* SchoolFoodAlarmUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -238,7 +238,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D5EA7A012A6F6586007A4727 /* Build configuration list for PBXProject "Money" */;
+			buildConfigurationList = D5EA7A012A6F6586007A4727 /* Build configuration list for PBXProject "SchoolFoodAlarm" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -251,9 +251,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5EA7A052A6F6586007A4727 /* Money */,
-				D5EA7A1B2A6F6587007A4727 /* MoneyTests */,
-				D5EA7A252A6F6587007A4727 /* MoneyUITests */,
+				D5EA7A052A6F6586007A4727 /* SchoolFoodAlarm */,
+				D5EA7A1B2A6F6587007A4727 /* SchoolFoodAlarmTests */,
+				D5EA7A252A6F6587007A4727 /* SchoolFoodAlarmUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,7 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EA7A212A6F6587007A4727 /* MoneyTests.swift in Sources */,
+				D5EA7A212A6F6587007A4727 /* SchoolFoodAlarmTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EA7A2B2A6F6587007A4727 /* MoneyUITests.swift in Sources */,
-				D5EA7A2D2A6F6587007A4727 /* MoneyUITestsLaunchTests.swift in Sources */,
+				D5EA7A2B2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift in Sources */,
+				D5EA7A2D2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,12 +318,12 @@
 /* Begin PBXTargetDependency section */
 		D5EA7A1E2A6F6587007A4727 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5EA7A052A6F6586007A4727 /* Money */;
+			target = D5EA7A052A6F6586007A4727 /* SchoolFoodAlarm */;
 			targetProxy = D5EA7A1D2A6F6587007A4727 /* PBXContainerItemProxy */;
 		};
 		D5EA7A282A6F6587007A4727 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5EA7A052A6F6586007A4727 /* Money */;
+			target = D5EA7A052A6F6586007A4727 /* SchoolFoodAlarm */;
 			targetProxy = D5EA7A272A6F6587007A4727 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -471,7 +471,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CY7T52VJ8W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Money/Info.plist;
+				INFOPLIST_FILE = SchoolFoodAlarm/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -499,7 +499,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CY7T52VJ8W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Money/Info.plist;
+				INFOPLIST_FILE = SchoolFoodAlarm/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -534,7 +534,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Money.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Money";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SchoolFoodAlarm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SchoolFoodAlarm";
 			};
 			name = Debug;
 		};
@@ -554,7 +554,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Money.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Money";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SchoolFoodAlarm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SchoolFoodAlarm";
 			};
 			name = Release;
 		};
@@ -597,7 +597,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5EA7A012A6F6586007A4727 /* Build configuration list for PBXProject "Money" */ = {
+		D5EA7A012A6F6586007A4727 /* Build configuration list for PBXProject "SchoolFoodAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5EA7A2E2A6F6587007A4727 /* Debug */,
@@ -606,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5EA7A302A6F6587007A4727 /* Build configuration list for PBXNativeTarget "Money" */ = {
+		D5EA7A302A6F6587007A4727 /* Build configuration list for PBXNativeTarget "SchoolFoodAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5EA7A312A6F6587007A4727 /* Debug */,
@@ -615,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5EA7A332A6F6587007A4727 /* Build configuration list for PBXNativeTarget "MoneyTests" */ = {
+		D5EA7A332A6F6587007A4727 /* Build configuration list for PBXNativeTarget "SchoolFoodAlarmTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5EA7A342A6F6587007A4727 /* Debug */,
@@ -624,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5EA7A362A6F6587007A4727 /* Build configuration list for PBXNativeTarget "MoneyUITests" */ = {
+		D5EA7A362A6F6587007A4727 /* Build configuration list for PBXNativeTarget "SchoolFoodAlarmUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5EA7A372A6F6587007A4727 /* Debug */,

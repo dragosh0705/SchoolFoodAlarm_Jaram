@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController : UIViewController {
     
+    var SelectedFoodNameString : String?
+    
     private var AppName : UILabel = {
         var label = UILabel()
         label.text = "학식하면"
@@ -28,7 +30,7 @@ class ViewController : UIViewController {
         return label
     }()
     
-    private var FoodSelect : UITextField = {
+    private var FoodSelectTextField : UITextField = {
         var FoodText = UITextField()
         FoodText.frame = CGRect(x: 20, y: 100, width: 100, height: 40)
         FoodText.borderStyle = .bezel
@@ -38,12 +40,25 @@ class ViewController : UIViewController {
         return FoodText
     }()
     
+    private var StoreButton : UIButton = {
+        var button = UIButton()
+        button.setTitle("저장", for: .normal)
+        button.setTitleColor(.blue, for: .normal)
+        button.setTitleColor(.gray, for: .highlighted)
+        button.addTarget(self, action: #selector(foodSelectedDidChange), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }()
+    
+    
     override func viewDidLoad() {
         let safeArea = view.safeAreaLayoutGuide
         super.viewDidLoad()
         self.view.addSubview(AppName)
         self.view.addSubview(FoodLabel)
-        self.view.addSubview(FoodSelect)
+        self.view.addSubview(FoodSelectTextField)
+        self.view.addSubview(StoreButton)
         
         NSLayoutConstraint.activate([
             AppName.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
@@ -56,8 +71,18 @@ class ViewController : UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            FoodSelect.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 100),
-            FoodSelect.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 20)
+            FoodSelectTextField.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 100),
+            FoodSelectTextField.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 20)
         ])
+        
+        NSLayoutConstraint.activate([
+            StoreButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 130),
+            StoreButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 80)
+        ])
+    }
+    
+    @objc private func foodSelectedDidChange() {
+        SelectedFoodNameString = FoodSelectTextField.text
+        print(SelectedFoodNameString!) //정상적으로 SelectedFoodNameString에 저장 됨
     }
 }

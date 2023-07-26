@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import SwiftSoup
+import Alamofire
 
 class ViewController : UIViewController {
     
@@ -79,10 +81,32 @@ class ViewController : UIViewController {
             StoreButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 130),
             StoreButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 80)
         ])
+        
     }
     
     @objc private func foodSelectedDidChange() {
         SelectedFoodNameString = FoodSelectTextField.text
-        print(SelectedFoodNameString!) //정상적으로 SelectedFoodNameString에 저장 됨
+        //print(SelectedFoodNameString!) //정상적으로 SelectedFoodNameString에 저장 됨
+        crawling(Text: SelectedFoodNameString!)
     }
+
+    func crawling(Text: String) {
+        let url = "https://prod.backend.hyuabot.app/rest/cafeteria/campus/2/restaurant/13/" // 창의인재원식당, 나머지 식당은 방학이라 메뉴 데이터 없음
+
+        AF.request(url).responseString(encoding: .utf8) { response in
+            switch response.result {
+            case .success(let html):
+                if html.contains(Text) {
+                    print("Food Found: \(Text)")
+                } else {
+                    print("Food Not Found")
+                    print(html)
+                }
+
+            case .failure(let error):
+                print("Error fetching data: \(error.localizedDescription)")
+            }
+        }
+    }
+
 }

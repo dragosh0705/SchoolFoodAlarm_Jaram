@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71EE4D3E68E37A01C3FE31B3 /* Pods_SchoolFoodAlarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5742250C02737AE3741AD7 /* Pods_SchoolFoodAlarm.framework */; };
+		90FEDE03ED0A01BEB16315AF /* Pods_SchoolFoodAlarmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDD46477AE6DBDF57A21A46 /* Pods_SchoolFoodAlarmUITests.framework */; };
+		9659ECF4B7773D766C7AB9FD /* Pods_SchoolFoodAlarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80B64361211E0A6B94693D3 /* Pods_SchoolFoodAlarmTests.framework */; };
 		D5EA7A0A2A6F6586007A4727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A092A6F6586007A4727 /* AppDelegate.swift */; };
 		D5EA7A0C2A6F6586007A4727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A0B2A6F6586007A4727 /* SceneDelegate.swift */; };
 		D5EA7A0E2A6F6586007A4727 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A0D2A6F6586007A4727 /* ViewController.swift */; };
@@ -36,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01ADA6B83679A6894BF51289 /* Pods-SchoolFoodAlarmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarmUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarmUITests/Pods-SchoolFoodAlarmUITests.release.xcconfig"; sourceTree = "<group>"; };
+		03BC32472B207EBBA8846783 /* Pods-SchoolFoodAlarmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarmTests/Pods-SchoolFoodAlarmTests.release.xcconfig"; sourceTree = "<group>"; };
+		0764CEB2F104FC0F0AA575EF /* Pods-SchoolFoodAlarmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarmTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarmTests/Pods-SchoolFoodAlarmTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1CDD46477AE6DBDF57A21A46 /* Pods_SchoolFoodAlarmUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarmUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57918B417CF12EA89163DFC9 /* Pods-SchoolFoodAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarm.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarm/Pods-SchoolFoodAlarm.release.xcconfig"; sourceTree = "<group>"; };
+		8F9C1BF78712E1E55BB5CD42 /* Pods-SchoolFoodAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarm/Pods-SchoolFoodAlarm.debug.xcconfig"; sourceTree = "<group>"; };
+		CF31127BE9BDDFDF500A3B08 /* Pods-SchoolFoodAlarmUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarmUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarmUITests/Pods-SchoolFoodAlarmUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5EA7A062A6F6586007A4727 /* SchoolFoodAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolFoodAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EA7A092A6F6586007A4727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5EA7A0B2A6F6586007A4727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,8 @@
 		D5EA7A262A6F6587007A4727 /* SchoolFoodAlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolFoodAlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EA7A2A2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITests.swift; sourceTree = "<group>"; };
 		D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F80B64361211E0A6B94693D3 /* Pods_SchoolFoodAlarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5742250C02737AE3741AD7 /* Pods_SchoolFoodAlarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71EE4D3E68E37A01C3FE31B3 /* Pods_SchoolFoodAlarm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9659ECF4B7773D766C7AB9FD /* Pods_SchoolFoodAlarmTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90FEDE03ED0A01BEB16315AF /* Pods_SchoolFoodAlarmUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C757C9D7EBD1EEEFCAB37F41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD5742250C02737AE3741AD7 /* Pods_SchoolFoodAlarm.framework */,
+				F80B64361211E0A6B94693D3 /* Pods_SchoolFoodAlarmTests.framework */,
+				1CDD46477AE6DBDF57A21A46 /* Pods_SchoolFoodAlarmUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D5EA79FD2A6F6586007A4727 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +108,8 @@
 				D5EA7A1F2A6F6587007A4727 /* SchoolFoodAlarmTests */,
 				D5EA7A292A6F6587007A4727 /* SchoolFoodAlarmUITests */,
 				D5EA7A072A6F6586007A4727 /* Products */,
+				E82AC5F21D3373661E9601C5 /* Pods */,
+				C757C9D7EBD1EEEFCAB37F41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +186,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E82AC5F21D3373661E9601C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F9C1BF78712E1E55BB5CD42 /* Pods-SchoolFoodAlarm.debug.xcconfig */,
+				57918B417CF12EA89163DFC9 /* Pods-SchoolFoodAlarm.release.xcconfig */,
+				0764CEB2F104FC0F0AA575EF /* Pods-SchoolFoodAlarmTests.debug.xcconfig */,
+				03BC32472B207EBBA8846783 /* Pods-SchoolFoodAlarmTests.release.xcconfig */,
+				CF31127BE9BDDFDF500A3B08 /* Pods-SchoolFoodAlarmUITests.debug.xcconfig */,
+				01ADA6B83679A6894BF51289 /* Pods-SchoolFoodAlarmUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5EA7A302A6F6587007A4727 /* Build configuration list for PBXNativeTarget "SchoolFoodAlarm" */;
 			buildPhases = (
+				162F893B7BCE1685D0446D36 /* [CP] Check Pods Manifest.lock */,
 				D5EA7A022A6F6586007A4727 /* Sources */,
 				D5EA7A032A6F6586007A4727 /* Frameworks */,
 				D5EA7A042A6F6586007A4727 /* Resources */,
+				CD8D2298E6FE5C3A7565AF10 /* [CP] Embed Pods Frameworks */,
+				D462BDA536654DD0E4AFFB9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5EA7A332A6F6587007A4727 /* Build configuration list for PBXNativeTarget "SchoolFoodAlarmTests" */;
 			buildPhases = (
+				32D3B5474AC52A734CD1222E /* [CP] Check Pods Manifest.lock */,
 				D5EA7A182A6F6587007A4727 /* Sources */,
 				D5EA7A192A6F6587007A4727 /* Frameworks */,
 				D5EA7A1A2A6F6587007A4727 /* Resources */,
+				21FE7440F0622A93A039B547 /* [CP] Embed Pods Frameworks */,
+				B23C6BCE0F05309338D88E59 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5EA7A362A6F6587007A4727 /* Build configuration list for PBXNativeTarget "SchoolFoodAlarmUITests" */;
 			buildPhases = (
+				A420F9CD9B77A1B3EEE15F77 /* [CP] Check Pods Manifest.lock */,
 				D5EA7A222A6F6587007A4727 /* Sources */,
 				D5EA7A232A6F6587007A4727 /* Frameworks */,
 				D5EA7A242A6F6587007A4727 /* Resources */,
+				DF1C7787AD86E136A5FCEC3C /* [CP] Embed Pods Frameworks */,
+				F366ECD985DF276325C0C5D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +333,194 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		162F893B7BCE1685D0446D36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SchoolFoodAlarm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21FE7440F0622A93A039B547 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SchoolFoodAlarmTests/Pods-SchoolFoodAlarmTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32D3B5474AC52A734CD1222E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SchoolFoodAlarmTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A420F9CD9B77A1B3EEE15F77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SchoolFoodAlarmUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B23C6BCE0F05309338D88E59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SchoolFoodAlarmTests/Pods-SchoolFoodAlarmTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD8D2298E6FE5C3A7565AF10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SchoolFoodAlarm/Pods-SchoolFoodAlarm-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SchoolFoodAlarm/Pods-SchoolFoodAlarm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D462BDA536654DD0E4AFFB9B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SchoolFoodAlarm/Pods-SchoolFoodAlarm-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF1C7787AD86E136A5FCEC3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SchoolFoodAlarmUITests/Pods-SchoolFoodAlarmUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F366ECD985DF276325C0C5D1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SchoolFoodAlarmUITests/Pods-SchoolFoodAlarmUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5EA7A022A6F6586007A4727 /* Sources */ = {
@@ -464,6 +701,7 @@
 		};
 		D5EA7A312A6F6587007A4727 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F9C1BF78712E1E55BB5CD42 /* Pods-SchoolFoodAlarm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -492,6 +730,7 @@
 		};
 		D5EA7A322A6F6587007A4727 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57918B417CF12EA89163DFC9 /* Pods-SchoolFoodAlarm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -520,6 +759,7 @@
 		};
 		D5EA7A342A6F6587007A4727 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0764CEB2F104FC0F0AA575EF /* Pods-SchoolFoodAlarmTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +780,7 @@
 		};
 		D5EA7A352A6F6587007A4727 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03BC32472B207EBBA8846783 /* Pods-SchoolFoodAlarmTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -560,6 +801,7 @@
 		};
 		D5EA7A372A6F6587007A4727 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF31127BE9BDDFDF500A3B08 /* Pods-SchoolFoodAlarmUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -578,6 +820,7 @@
 		};
 		D5EA7A382A6F6587007A4727 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01ADA6B83679A6894BF51289 /* Pods-SchoolFoodAlarmUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

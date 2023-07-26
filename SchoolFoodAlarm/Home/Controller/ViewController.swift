@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Money
-//
-//  Created by 최영우 on 7/25/23.
-//
-
 import Foundation
 import UIKit
 import SwiftSoup
@@ -14,10 +7,20 @@ class ViewController : UIViewController {
     
     var SelectedFoodNameString : String?
     
+    private var BackgroundView: UIView = {
+        var view = UIView()
+        view.backgroundColor = .systemBlue
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
+    }()
+    
     private var AppName : UILabel = {
         var label = UILabel()
         label.text = "학식하면"
+        label.textColor = .white
         label.font = UIFont.systemFont(ofSize:30)
+        label.backgroundColor = .systemBlue
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -34,7 +37,6 @@ class ViewController : UIViewController {
     
     private var FoodSelectTextField : UITextField = {
         var FoodText = UITextField()
-        FoodText.frame = CGRect(x: 20, y: 100, width: 100, height: 40)
         FoodText.borderStyle = .bezel
         FoodText.placeholder = "메뉴 입력"
         FoodText.translatesAutoresizingMaskIntoConstraints = false
@@ -45,8 +47,9 @@ class ViewController : UIViewController {
     private var StoreButton : UIButton = {
         var button = UIButton()
         button.setTitle("저장", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.setTitleColor(.gray, for: .highlighted)
+        button.backgroundColor = .orange
         button.addTarget(self, action: #selector(foodSelectedDidChange), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -57,30 +60,45 @@ class ViewController : UIViewController {
     override func viewDidLoad() {
         let safeArea = view.safeAreaLayoutGuide
         super.viewDidLoad()
+        self.view.addSubview(BackgroundView)
         self.view.addSubview(AppName)
         self.view.addSubview(FoodLabel)
         self.view.addSubview(FoodSelectTextField)
         self.view.addSubview(StoreButton)
         
         NSLayoutConstraint.activate([
+            BackgroundView.topAnchor.constraint(equalTo: safeArea.topAnchor),
+            BackgroundView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            BackgroundView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            BackgroundView.bottomAnchor.constraint(equalTo: AppName.bottomAnchor, constant: 10)
+        ])
+        
+        NSLayoutConstraint.activate([
             AppName.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
-            AppName.leadingAnchor.constraint(equalTo : safeArea.leadingAnchor, constant: 16)
+            AppName.centerXAnchor.constraint(equalTo : self.view.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            FoodLabel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 80),
-            FoodLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 20)
+            FoodLabel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 140),
+            FoodLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            FoodSelectTextField.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 100),
-            FoodSelectTextField.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 20)
+            FoodSelectTextField.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 170),
+            FoodSelectTextField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            FoodSelectTextField.widthAnchor.constraint(equalToConstant: 300),
+            FoodSelectTextField.heightAnchor.constraint(equalToConstant: 50)
         ])
         
         NSLayoutConstraint.activate([
-            StoreButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 130),
-            StoreButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 80)
+            StoreButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 240),
+            StoreButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            StoreButton.heightAnchor.constraint(equalToConstant: 50),
+            StoreButton.widthAnchor.constraint(equalToConstant: 300)
         ])
+        
+        
+        hideKeyboardWhenTappedAround() // 화면 탭 시 키보드 숨기기
         
     }
     
@@ -89,7 +107,13 @@ class ViewController : UIViewController {
         //print(SelectedFoodNameString!) //정상적으로 SelectedFoodNameString에 저장 됨
         crawling(Text: SelectedFoodNameString!)
     }
-
+    
+    
+    
+    
+    
+    
+    //휴아봇 학식 데이터 크롤링
     func crawling(Text: String) {
         let url = "https://prod.backend.hyuabot.app/rest/cafeteria/campus/2/restaurant/13/" // 창의인재원식당, 나머지 식당은 방학이라 메뉴 데이터 없음
 
@@ -100,7 +124,6 @@ class ViewController : UIViewController {
                     print("Food Found: \(Text)")
                 } else {
                     print("Food Not Found")
-                    print(html)
                 }
 
             case .failure(let error):
@@ -110,3 +133,5 @@ class ViewController : UIViewController {
     }
 
 }
+
+

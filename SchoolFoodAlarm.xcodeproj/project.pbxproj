@@ -19,6 +19,7 @@
 		D5EA7A212A6F6587007A4727 /* SchoolFoodAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A202A6F6587007A4727 /* SchoolFoodAlarmTests.swift */; };
 		D5EA7A2B2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2A2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift */; };
 		D5EA7A2D2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */; };
+		D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A7D2A717EEB007A4727 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D5EA7A262A6F6587007A4727 /* SchoolFoodAlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolFoodAlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EA7A2A2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITests.swift; sourceTree = "<group>"; };
 		D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D5EA7A7D2A717EEB007A4727 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F80B64361211E0A6B94693D3 /* Pods_SchoolFoodAlarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5742250C02737AE3741AD7 /* Pods_SchoolFoodAlarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				D5EA7A122A6F6587007A4727 /* Assets.xcassets */,
 				D5EA7A142A6F6587007A4727 /* LaunchScreen.storyboard */,
 				D5EA7A172A6F6587007A4727 /* Info.plist */,
+				D5EA7A7D2A717EEB007A4727 /* Extension.swift */,
 			);
 			path = SchoolFoodAlarm;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				D5EA7A0E2A6F6586007A4727 /* ViewController.swift in Sources */,
 				D5EA7A0A2A6F6586007A4727 /* AppDelegate.swift in Sources */,
 				D5EA7A0C2A6F6586007A4727 /* SceneDelegate.swift in Sources */,
+				D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

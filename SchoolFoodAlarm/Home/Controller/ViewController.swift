@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
-import SwiftSoup
 import Alamofire
+import SideMenu
 
 class ViewController : UIViewController {
     
@@ -56,6 +56,18 @@ class ViewController : UIViewController {
         return button
     }()
     
+    private var TimeSelectButton: UIButton = {
+        var button = UIButton()
+        button.setTitle("Push 설정", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.gray, for: .highlighted)
+        button.backgroundColor = .systemBlue
+        //button.addTarget(self, action: #selector(PushSettingVC()), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }()
+    
     
     override func viewDidLoad() {
         let safeArea = view.safeAreaLayoutGuide
@@ -65,6 +77,7 @@ class ViewController : UIViewController {
         self.view.addSubview(FoodLabel)
         self.view.addSubview(FoodSelectTextField)
         self.view.addSubview(StoreButton)
+        self.view.addSubview(TimeSelectButton)
         
         NSLayoutConstraint.activate([
             BackgroundView.topAnchor.constraint(equalTo: safeArea.topAnchor),
@@ -74,7 +87,7 @@ class ViewController : UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            AppName.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
+            AppName.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 15),
             AppName.centerXAnchor.constraint(equalTo : self.view.centerXAnchor)
         ])
         
@@ -95,6 +108,11 @@ class ViewController : UIViewController {
             StoreButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             StoreButton.heightAnchor.constraint(equalToConstant: 50),
             StoreButton.widthAnchor.constraint(equalToConstant: 300)
+        ])
+        
+        NSLayoutConstraint.activate([
+            TimeSelectButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 310),
+            TimeSelectButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 30)
         ])
         
         

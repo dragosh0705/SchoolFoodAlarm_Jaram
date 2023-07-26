@@ -20,6 +20,7 @@
 		D5EA7A2B2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2A2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift */; };
 		D5EA7A2D2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */; };
 		D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A7D2A717EEB007A4727 /* Extension.swift */; };
+		D5EA7A842A71977C007A4727 /* PushSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A832A71977C007A4727 /* PushSettingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		D5EA7A2A2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITests.swift; sourceTree = "<group>"; };
 		D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D5EA7A7D2A717EEB007A4727 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		D5EA7A832A71977C007A4727 /* PushSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSettingVC.swift; sourceTree = "<group>"; };
 		F80B64361211E0A6B94693D3 /* Pods_SchoolFoodAlarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5742250C02737AE3741AD7 /* Pods_SchoolFoodAlarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 		D5EA7A082A6F6586007A4727 /* SchoolFoodAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				D5EA7A7F2A719728007A4727 /* PushSetting */,
 				D5EA7A392A6F6596007A4727 /* Home */,
 				D5EA7A092A6F6586007A4727 /* AppDelegate.swift */,
 				D5EA7A0B2A6F6586007A4727 /* SceneDelegate.swift */,
@@ -183,6 +186,38 @@
 			sourceTree = "<group>";
 		};
 		D5EA7A3C2A6F65B9007A4727 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5EA7A7F2A719728007A4727 /* PushSetting */ = {
+			isa = PBXGroup;
+			children = (
+				D5EA7A822A71974E007A4727 /* Model */,
+				D5EA7A812A719744007A4727 /* View */,
+				D5EA7A802A71973A007A4727 /* Controller */,
+			);
+			path = PushSetting;
+			sourceTree = "<group>";
+		};
+		D5EA7A802A71973A007A4727 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5EA7A832A71977C007A4727 /* PushSettingVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5EA7A812A719744007A4727 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5EA7A822A71974E007A4727 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -452,6 +487,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SchoolFoodAlarm/Pods-SchoolFoodAlarm-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -459,6 +495,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +569,7 @@
 			files = (
 				D5EA7A0E2A6F6586007A4727 /* ViewController.swift in Sources */,
 				D5EA7A0A2A6F6586007A4727 /* AppDelegate.swift in Sources */,
+				D5EA7A842A71977C007A4727 /* PushSettingVC.swift in Sources */,
 				D5EA7A0C2A6F6586007A4727 /* SceneDelegate.swift in Sources */,
 				D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */,
 			);

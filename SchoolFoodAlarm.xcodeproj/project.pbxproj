@@ -21,6 +21,7 @@
 		D5EA7A2D2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */; };
 		D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A7D2A717EEB007A4727 /* Extension.swift */; };
 		D5EA7A842A71977C007A4727 /* PushSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A832A71977C007A4727 /* PushSettingVC.swift */; };
+		EEC8AACD2A72040F00879181 /* FoodSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8AACC2A72040F00879181 /* FoodSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D5EA7A7D2A717EEB007A4727 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D5EA7A832A71977C007A4727 /* PushSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSettingVC.swift; sourceTree = "<group>"; };
+		EEC8AACC2A72040F00879181 /* FoodSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSession.swift; sourceTree = "<group>"; };
 		F80B64361211E0A6B94693D3 /* Pods_SchoolFoodAlarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5742250C02737AE3741AD7 /* Pods_SchoolFoodAlarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -166,6 +168,7 @@
 				D5EA7A3C2A6F65B9007A4727 /* Model */,
 				D5EA7A3B2A6F65B3007A4727 /* View */,
 				D5EA7A3A2A6F65A6007A4727 /* Controller */,
+				EEC8AACC2A72040F00879181 /* FoodSession.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				D5EA7A0A2A6F6586007A4727 /* AppDelegate.swift in Sources */,
 				D5EA7A842A71977C007A4727 /* PushSettingVC.swift in Sources */,
 				D5EA7A0C2A6F6586007A4727 /* SceneDelegate.swift in Sources */,
+				EEC8AACD2A72040F00879181 /* FoodSession.swift in Sources */,
 				D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

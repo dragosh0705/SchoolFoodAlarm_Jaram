@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (5.7.1)
+  - SideMenu (6.5.0)
+  - SwiftSoup (2.6.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - SideMenu
+  - SwiftSoup
+
+SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SwiftSoup: 5dd2c1b06afc964f30d99894af6ede22ede627aa
+
+PODFILE CHECKSUM: 7f64e423fc5f21efeb8feb74d097973698117435
+
+COCOAPODS: 1.4.0

@@ -59,11 +59,10 @@ class ViewController : UIViewController {
     
     private var TimeSelectButton: UIButton = {
         var button = UIButton()
-        button.setTitle("Push 설정", for: .normal)
+        button.setTitle("Push 시간", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.setTitleColor(.gray, for: .highlighted)
         button.backgroundColor = .systemBlue
-        //button.addTarget(self, action: #selector(goPushSettingVC()), for: .touchUpInside) // 여기서부터 시작하기
         button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
@@ -73,6 +72,7 @@ class ViewController : UIViewController {
     override func viewDidLoad() {
         let safeArea = view.safeAreaLayoutGuide
         super.viewDidLoad()
+        setupTimeSelectButton()
         self.view.addSubview(BackgroundView)
         self.view.addSubview(AppName)
         self.view.addSubview(FoodLabel)
@@ -117,6 +117,7 @@ class ViewController : UIViewController {
         ])
         
         
+        
         hideKeyboardWhenTappedAround() // 화면 탭 시 키보드 숨기기
         
     }
@@ -125,15 +126,22 @@ class ViewController : UIViewController {
         SelectedFoodNameString = FoodSelectTextField.text
         //print(SelectedFoodNameString!) //정상적으로 SelectedFoodNameString에 저장 됨
         crawling(Text: SelectedFoodNameString!)
+        
+        //pushNotification(title: "학식 알림", body: "저장된 음식과 같은 메뉴가 나옵니다!", seconds: 2, identifier: "MenuAlarm")
     }
     
-    /*
-    @objc private func goPushSettingVC() { // PushSettingVC 파일로 넘어가기
-        performSegue(withIdentifier: "PushSettingVC", sender: nil)
+    private func setupTimeSelectButton() {
+        TimeSelectButton.addTarget(self, action: #selector(goPushSettingVC), for: .touchUpInside)
     }
-     */
+        
     
     
+    @objc private func goPushSettingVC() {
+        let pushSettingVC = PushSettingVC()
+        self.present(pushSettingVC, animated: true, completion: nil)
+    }
+
+
     
     
     
@@ -149,6 +157,7 @@ class ViewController : UIViewController {
             case .success(let html):
                 if html.contains(Text) {
                     print("Food Found: \(Text)")
+                    pushNotification(title: "학식 알림", body: "\(Text) 메뉴가 나옵니다!", seconds: 2, identifier: "MenuAlarm")
                 } else {
                     print("Food Not Found")
                 }

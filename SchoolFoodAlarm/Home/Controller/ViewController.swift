@@ -15,6 +15,7 @@ class ViewController : UIViewController {
         return view
     }()
     
+    
     private var AppName : UILabel = {
         var label = UILabel()
         label.text = "학식하면"

@@ -21,6 +21,7 @@
 		D5EA7A2D2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */; };
 		D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A7D2A717EEB007A4727 /* Extension.swift */; };
 		D5EA7A842A71977C007A4727 /* PushSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A832A71977C007A4727 /* PushSettingVC.swift */; };
+		EE6106D92A721F9100CF45DF /* FoodDataSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6106D82A721F9100CF45DF /* FoodDataSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D5EA7A7D2A717EEB007A4727 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D5EA7A832A71977C007A4727 /* PushSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSettingVC.swift; sourceTree = "<group>"; };
+		EE6106D82A721F9100CF45DF /* FoodDataSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDataSession.swift; sourceTree = "<group>"; };
 		F80B64361211E0A6B94693D3 /* Pods_SchoolFoodAlarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5742250C02737AE3741AD7 /* Pods_SchoolFoodAlarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				D5EA7A0D2A6F6586007A4727 /* ViewController.swift */,
+				EE6106D82A721F9100CF45DF /* FoodDataSession.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 			files = (
 				D5EA7A0E2A6F6586007A4727 /* ViewController.swift in Sources */,
 				D5EA7A0A2A6F6586007A4727 /* AppDelegate.swift in Sources */,
+				EE6106D92A721F9100CF45DF /* FoodDataSession.swift in Sources */,
 				D5EA7A842A71977C007A4727 /* PushSettingVC.swift in Sources */,
 				D5EA7A0C2A6F6586007A4727 /* SceneDelegate.swift in Sources */,
 				D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */,

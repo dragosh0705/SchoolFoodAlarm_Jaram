@@ -62,7 +62,7 @@ class ViewController : UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.setTitleColor(.gray, for: .highlighted)
         button.backgroundColor = .systemBlue
-        //button.addTarget(self, action: #selector(PushSettingVC()), for: .touchUpInside)
+        //button.addTarget(self, action: #selector(goPushSettingVC()), for: .touchUpInside) // 여기서부터 시작하기
         button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
@@ -125,6 +125,14 @@ class ViewController : UIViewController {
         //print(SelectedFoodNameString!) //정상적으로 SelectedFoodNameString에 저장 됨
         crawling(Text: SelectedFoodNameString!)
     }
+    
+    /*
+    @objc private func goPushSettingVC() { // PushSettingVC 파일로 넘어가기
+        performSegue(withIdentifier: "PushSettingVC", sender: nil)
+    }
+     */
+    
+    
     
     
     

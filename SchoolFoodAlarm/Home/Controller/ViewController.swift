@@ -7,6 +7,9 @@ class ViewController : UIViewController {
     
     var SelectedFoodNameString : String?
     
+    var MinuteTime : Int = 0
+    
+    
     private var BackgroundView: UIView = {
         var view = UIView()
         view.backgroundColor = .systemBlue
@@ -113,7 +116,7 @@ class ViewController : UIViewController {
         
         NSLayoutConstraint.activate([
             TimeSelectButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 310),
-            TimeSelectButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 30)
+            TimeSelectButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
         
         
@@ -140,6 +143,23 @@ class ViewController : UIViewController {
         let pushSettingVC = PushSettingVC()
         self.present(pushSettingVC, animated: true, completion: nil)
     }
+    
+    func NowTime() -> Int {
+        let formatter_time = DateFormatter()
+        formatter_time.dateFormat = "HH:mm"
+        let current_time_string = formatter_time.string(from: Date())
+
+        let calendar = Calendar.current
+        let timeComponents = formatter_time.date(from: current_time_string)
+
+        if let timeComponents = timeComponents {
+            let hour = calendar.component(.hour, from: timeComponents)
+            let minute = calendar.component(.minute, from: timeComponents)
+           MinuteTime = (hour * 60) + minute
+        }
+        return MinuteTime
+    }
+
 
 
     
@@ -152,12 +172,16 @@ class ViewController : UIViewController {
     func crawling(Text: String) {
         let url = "https://prod.backend.hyuabot.app/rest/cafeteria/campus/2/restaurant/13/" // 창의인재원식당, 나머지 식당은 방학이라 메뉴 데이터 없음
 
-        AF.request(url).responseString(encoding: .utf8) { response in
+        AF.request(url).responseString(encoding: .utf8) { [self] response in
             switch response.result {
             case .success(let html):
                 if html.contains(Text) {
                     print("Food Found: \(Text)")
-                    pushNotification(title: "학식 알림", body: "\(Text) 메뉴가 나옵니다!", seconds: 2, identifier: "MenuAlarm")
+                    //print(time)
+                    //print(NowTime())
+                    //if time == self.NowTime() {
+                        pushNotification(title: "학식 알림", body: "\(Text) 메뉴가 나옵니다!", seconds: 2, identifier: "MenuAlarm")
+                    //}
                 } else {
                     print("Food Not Found")
                 }

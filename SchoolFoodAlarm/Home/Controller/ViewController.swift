@@ -94,6 +94,7 @@ class ViewController : UIViewController {
             MenuTable.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             print(MenuTable)
+            crawling()
             
         } else if editingStyle == .insert {
             
@@ -232,26 +233,30 @@ class ViewController : UIViewController {
       @objc private func crawling() {
           let url = "https://prod.backend.hyuabot.app/rest/cafeteria/campus/2/restaurant/13/" // 창의인재원식당, 나머지 식당은 방학이라 메뉴 데이터 없음
           
+          var exist : [String] = []
           
           AF.request(url).responseString(encoding: .utf8) { [self] response in
               switch response.result {
               case .success(let html):
                   date.calendar = Calendar.current
-                  date.hour = 3
-                  date.minute = 13
+                  date.hour = 11
+                  date.minute = 10
                   for i in MenuTable {
                       if html.contains(i) {
-                          print("Food Found: \(i)")
-                          let content = UNMutableNotificationContent()
-                          content.title = "학식 알림"
-                          content.body = "\(i) 메뉴가 나옵니다!"
-                          content.sound = .default
-                          content.badge = 1
-                          let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
-                          let request = UNNotificationRequest(identifier: "MenuAlarm", content: content, trigger: trigger)
-                          UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-                          
-                      } else {
+                          exist.append(i)
+                          if exist.count != 0 {
+                              print("Food Found: \(exist)")
+                              let content = UNMutableNotificationContent()
+                              content.title = "학식 알림"
+                              content.body = "\(exist) 메뉴가 나옵니다!"
+                              content.sound = .default
+                              content.badge = 1
+                              let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+                              let request = UNNotificationRequest(identifier: "MenuAlarm", content: content, trigger: trigger)
+                              UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                          }
+                      }
+                      if exist.count == 0 {
                           print("Food Not Found")
                           let content = UNMutableNotificationContent()
                           content.title = "학식 알림"

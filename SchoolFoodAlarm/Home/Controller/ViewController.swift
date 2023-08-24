@@ -20,7 +20,7 @@ class ViewController : UIViewController {
     
     private var BackgroundView: UIView = {
         var view = UIView()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = UIColor(red: 14/255, green: 74/255, blue: 132/255, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
@@ -31,8 +31,9 @@ class ViewController : UIViewController {
         var label = UILabel()
         label.text = "학식하면"
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize:30)
-        label.backgroundColor = .systemBlue
+        label.font = UIFont.systemFont(ofSize:30, weight: .heavy)
+        label.backgroundColor = UIColor(red: 14/255, green: 74/255, blue: 132/255, alpha: 1)
+
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -41,7 +42,7 @@ class ViewController : UIViewController {
     private var FoodLabel : UILabel = {
         var label = UILabel()
         label.text = "알람 메뉴"
-        label.font = UIFont.systemFont(ofSize:15)
+        label.font = UIFont.systemFont(ofSize:15, weight: .heavy)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -51,7 +52,7 @@ class ViewController : UIViewController {
         var FoodText = UITextField()
         FoodText.placeholder = "  메뉴 입력"
         FoodText.layer.cornerRadius = 13
-        FoodText.layer.borderWidth = 1
+        FoodText.layer.borderWidth = 0.5
         FoodText.translatesAutoresizingMaskIntoConstraints = false
         
         return FoodText
@@ -60,11 +61,22 @@ class ViewController : UIViewController {
     private var StoreButton : UIButton = {
         var button = UIButton()
         button.setTitle("저장", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .heavy)
+        button.titleLabel?.layer.shadowColor = UIColor.black.cgColor
+        button.titleLabel?.layer.masksToBounds = false
+        button.titleLabel?.layer.shadowOffset = CGSize(width: 0, height: 4)
+        button.titleLabel?.layer.shadowRadius = 5
+        button.titleLabel?.layer.shadowOpacity = 0.3
         button.setTitleColor(.white, for: .normal)
         button.setTitleColor(.gray, for: .highlighted)
-        button.backgroundColor = .orange
+        button.backgroundColor = UIColor(red: 100/255, green: 160/255, blue: 200/255, alpha: 1)
         button.layer.cornerRadius = 13
         button.addTarget(self, action: #selector(foodSelectedDidChange), for: .touchUpInside)
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.masksToBounds = false
+        button.layer.shadowOffset = CGSize(width: 0, height: 4)
+        button.layer.shadowRadius = 5
+        button.layer.shadowOpacity = 0.3
         button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
@@ -137,7 +149,7 @@ class ViewController : UIViewController {
         scrollView.addSubview(FoodLabel)
         scrollView.addSubview(FoodSelectTextField)
         scrollView.addSubview(StoreButton)
-        scrollView.addSubview(TimeSelectButton)
+       // scrollView.addSubview(TimeSelectButton)
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -173,10 +185,12 @@ class ViewController : UIViewController {
             StoreButton.widthAnchor.constraint(equalToConstant: 300)
         ])
         
+        /*
         NSLayoutConstraint.activate([
             TimeSelectButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 310),
             TimeSelectButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
+         */
         
         
         tableView.register(MenuTableViewCell.self, forCellReuseIdentifier: "MenuTableViewCell")

@@ -1,11 +1,18 @@
+//
+//  TodayTableViewCell.swift
+//  SchoolFoodAlarm
+//
+//  Created by 최영우 on 2023. 11. 19..
+//
+
 import Foundation
 import UIKit
 
-class MenuTableViewCell: UITableViewCell {
+class TodayTableViewCell: UITableViewCell {
     
     private let MenuLabel: UILabel = {
         var label = UILabel()
-        label.text = MenuTableArr[0]
+        label.text = TodayTableArr[0]
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

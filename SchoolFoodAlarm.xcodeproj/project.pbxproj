@@ -10,6 +10,7 @@
 		71EE4D3E68E37A01C3FE31B3 /* Pods_SchoolFoodAlarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5742250C02737AE3741AD7 /* Pods_SchoolFoodAlarm.framework */; };
 		90FEDE03ED0A01BEB16315AF /* Pods_SchoolFoodAlarmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDD46477AE6DBDF57A21A46 /* Pods_SchoolFoodAlarmUITests.framework */; };
 		9659ECF4B7773D766C7AB9FD /* Pods_SchoolFoodAlarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80B64361211E0A6B94693D3 /* Pods_SchoolFoodAlarmTests.framework */; };
+		D5A766F22B092F9300F57CB7 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A766F12B092F9300F57CB7 /* TodayTableViewCell.swift */; };
 		D5E348EC2A973638009BE79A /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E348EB2A973638009BE79A /* MenuTableViewCell.swift */; };
 		D5EA7A0A2A6F6586007A4727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A092A6F6586007A4727 /* AppDelegate.swift */; };
 		D5EA7A0C2A6F6586007A4727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A0B2A6F6586007A4727 /* SceneDelegate.swift */; };
@@ -52,6 +53,7 @@
 		57918B417CF12EA89163DFC9 /* Pods-SchoolFoodAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarm.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarm/Pods-SchoolFoodAlarm.release.xcconfig"; sourceTree = "<group>"; };
 		8F9C1BF78712E1E55BB5CD42 /* Pods-SchoolFoodAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarm/Pods-SchoolFoodAlarm.debug.xcconfig"; sourceTree = "<group>"; };
 		CF31127BE9BDDFDF500A3B08 /* Pods-SchoolFoodAlarmUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarmUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarmUITests/Pods-SchoolFoodAlarmUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D5A766F12B092F9300F57CB7 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
 		D5E348EB2A973638009BE79A /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		D5EA7A062A6F6586007A4727 /* SchoolFoodAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolFoodAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EA7A092A6F6586007A4727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				D5EA7A0D2A6F6586007A4727 /* ViewController.swift */,
 				EE6106D82A721F9100CF45DF /* FoodDataSession.swift */,
 				D5E348EB2A973638009BE79A /* MenuTableViewCell.swift */,
+				D5A766F12B092F9300F57CB7 /* TodayTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				D5EA7A842A71977C007A4727 /* PushSettingVC.swift in Sources */,
 				D5EA7A0C2A6F6586007A4727 /* SceneDelegate.swift in Sources */,
 				D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */,
+				D5A766F22B092F9300F57CB7 /* TodayTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

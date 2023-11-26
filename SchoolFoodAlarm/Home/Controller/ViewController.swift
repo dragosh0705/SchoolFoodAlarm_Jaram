@@ -1,45 +1,35 @@
 import Foundation
 import SwiftSoup
 import UIKit
-import Alamofire
 import SideMenu
-
 
 var MenuTableArr: [String] = []
 var TodayTableArr : [String] = []
+var storedArr : [String] = []
 
 class ViewController : UIViewController {
-    
-    
     var SelectedFoodNameString : String?
-    
     var MinuteTime : Int = 0
-    
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
     
-    
     private var BackgroundView: UIView = {
         var view = UIView()
         view.backgroundColor = UIColor(red: 14/255, green: 74/255, blue: 132/255, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
-        
         return view
     }()
     
-    
     private var AppName : UILabel = {
         var label = UILabel()
-        label.text = "학식하면"
+        label.text = "학식한대"
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize:30, weight: .heavy)
         label.backgroundColor = UIColor(red: 14/255, green: 74/255, blue: 132/255, alpha: 1)
-        
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
@@ -48,7 +38,6 @@ class ViewController : UIViewController {
         label.text = "알람 메뉴"
         label.font = UIFont.systemFont(ofSize:15, weight: .heavy)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
@@ -58,7 +47,6 @@ class ViewController : UIViewController {
         FoodText.layer.cornerRadius = 13
         FoodText.layer.borderWidth = 0.5
         FoodText.translatesAutoresizingMaskIntoConstraints = false
-        
         return FoodText
     }()
     
@@ -82,27 +70,15 @@ class ViewController : UIViewController {
         button.layer.shadowRadius = 5
         button.layer.shadowOpacity = 0.3
         button.translatesAutoresizingMaskIntoConstraints = false
-        
         return button
     }()
     
-    private var TimeSelectButton: UIButton = {
-        var button = UIButton()
-        button.setTitle("Push 시간", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
-        button.setTitleColor(.gray, for: .highlighted)
-        button.addTarget(self, action: #selector(goPushSettingVC), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
     
     private var StoredFoodInfoLabel : UILabel = {
         var label = UILabel()
         label.text = "선택한 메뉴"
         label.font = UIFont.systemFont(ofSize:15, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
@@ -111,7 +87,6 @@ class ViewController : UIViewController {
         label.text = "오늘의 메뉴"
         label.font = UIFont.systemFont(ofSize:15, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
@@ -124,65 +99,20 @@ class ViewController : UIViewController {
         let tableview = UITableView()
         return tableview
     }()
-    
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        if editingStyle == .delete {
-            
-            MenuTableArr.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            print(MenuTableArr)
-        }
-        if editingStyle == .insert {
-            
-        }
-    }
-        
-    private func setConstraint() {
-        self.view.addSubview(tableView1)
-        tableView1.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            tableView1.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 450),
-            tableView1.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100), // 바닥에서 위로 50만큼
-            tableView1.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 200),
-            tableView1.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20) // 오른쪽에서 왼쪽으로 20만큼
-        ])
-        
-        tableView1.isScrollEnabled = true
-    }
-    
-    private func setConstraint2() {
-        self.view.addSubview(tableView2)
-        tableView2.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        NSLayoutConstraint.activate([
-            tableView2.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 450),
-            tableView2.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100), // 바닥에서 위로 50만큼
-            tableView2.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-            tableView2.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -200) // 오른쪽에서 왼쪽으로 20만큼
-        ])
-        
-        tableView2.isScrollEnabled = true
-    }
-    
     override func viewDidLoad() {
         let safeArea = view.safeAreaLayoutGuide
         super.viewDidLoad()
         crawling()
         view.addSubview(scrollView)
-        
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        
+        print(MenuTableArr)
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
-        
         
         scrollView.addSubview(BackgroundView)
         scrollView.addSubview(AppName)
@@ -191,13 +121,11 @@ class ViewController : UIViewController {
         scrollView.addSubview(StoreButton)
         scrollView.addSubview(StoredFoodInfoLabel)
         scrollView.addSubview(TodayFoodInfoLabel)
-        // scrollView.addSubview(TimeSelectButton)
         tableView1.delegate = self
         tableView1.dataSource = self
-        
-        
         tableView2.delegate = self
         tableView2.dataSource = self
+        
         
         
         NSLayoutConstraint.activate([
@@ -224,8 +152,6 @@ class ViewController : UIViewController {
             FoodSelectTextField.heightAnchor.constraint(equalToConstant: 50)
         ])
         
-        
-        
         NSLayoutConstraint.activate([
             StoreButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 240),
             StoreButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -243,70 +169,74 @@ class ViewController : UIViewController {
             TodayFoodInfoLabel.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 60),
         ])
         
-        
-        
-        /*
-         NSLayoutConstraint.activate([
-         TimeSelectButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 310),
-         TimeSelectButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-         ])
-         */
-        
-        
         tableView1.register(MenuTableViewCell.self, forCellReuseIdentifier: "MenuTableViewCell")
         setConstraint()
-        
         tableView2.register(TodayTableViewCell.self, forCellReuseIdentifier: "TodayTableViewCell")
         setConstraint2()
-        
-        
-        
-        
-        
-        
-        
         hideKeyboardWhenTappedAround() // 화면 탭 시 키보드 숨기기
-        
+    }
+    
+    private func setConstraint() {
+        self.view.addSubview(tableView1)
+        tableView1.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView1.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 450),
+            tableView1.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100), // 바닥에서 위로 50만큼
+            tableView1.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 200),
+            tableView1.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20) // 오른쪽에서 왼쪽으로 20만큼
+        ])
+        tableView1.isScrollEnabled = true
+    }
+    
+    private func setConstraint2() {
+        self.view.addSubview(tableView2)
+        tableView2.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView2.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 450),
+            tableView2.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100), // 바닥에서 위로 50만큼
+            tableView2.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            tableView2.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -200) // 오른쪽에서 왼쪽으로 20만큼
+        ])
+        tableView2.isScrollEnabled = true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            MenuTableArr.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            print(MenuTableArr)
+        }
+        if editingStyle == .insert {
+        }
     }
     
     @objc private func foodSelectedDidChange()  {
         SelectedFoodNameString = FoodSelectTextField.text
         MenuTableArr.append(SelectedFoodNameString!)
+        UserDefaults.standard.setValue(MenuTableArr, forKey: "UserMenu")
+        storedArr = (UserDefaults.standard.array(forKey: "UserMenu") as? [String])!
         tableView1.reloadData()
+        print(storedArr)
         crawling()
-    
-        //pushNotification(title: "학식 알림", body: "저장된 음식과 같은 메뉴가 나옵니다!", seconds: 2, identifier: "MenuAlarm")
     }
     
     
-    
-    
-    
-    @objc private func goPushSettingVC() {
-        let pushSettingVC = PushSettingVC()
-        self.present(pushSettingVC, animated: true, completion: nil)
-    }
-        
     @objc private func crawling() {
-        
         struct FoodDataContainer {
             var container: [FoodData]
             init(container: [FoodData]) {
                 self.container = container
             }
             var emptycontainer : [String] = []
-            
             mutating func load(_ res: Restaurant) async {
                 let myUrl = URL(string: "https://www.hanyang.ac.kr/web/www/" + res.rawValue)!
                 let html = try? String(contentsOf: myUrl, encoding: .utf8)
-                
-                
                 var menus: [String] = []
-                
                 let cal = Calendar(identifier: .gregorian)
                 let now = Date()
                 let comps = cal.dateComponents([.weekday], from: now)
-                let today = FoodDataDate(rawValue: comps.weekday!)
+                let today = comps.weekday!
+                var menustr = ""
                 
                 if html == nil {
                     emptycontainer.append("학식 없음")
@@ -314,9 +244,8 @@ class ViewController : UIViewController {
                 
                 if html != nil {
                     let doc : Document = try! SwiftSoup.parse(html!)
-                
                     
-                    if FoodDataDate(rawValue: 1) == today || FoodDataDate(rawValue: 7) == today  {
+                    if FoodDataDate(rawValue: 1)!.rawValue == today || FoodDataDate(rawValue: 7)!.rawValue == today  {
                         let menu1 = try! doc.select("#messhall1 > div:nth-child(2) > div > div > div > ul > li > a > h3")
                         menus.append(try! menu1.text())
                         var menustr = ""
@@ -327,55 +256,48 @@ class ViewController : UIViewController {
                         TodayTableArr.append(contentsOf: menustr.split(separator: " ").map { String($0) })
                         
                     }
-                    
-                    
-                    
-                    if FoodDataDate(rawValue: 2) == today {
-                        let menu1 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(\(2) > ul > li:nth-child(\(1)")
-                        let menu2 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(\(2) > ul > li:nth-child(\(2)")
+                    print(container)
+                    if 2 == today {
+                        let menu1 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(2) > ul > li:nth-child(1)")
+                        let menu2 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(2) > ul > li:nth-child(2)")
                         menus.append(try! menu1.text())
                         menus.append(try! menu2.text())
                         self.container.append(.init(date: .init(rawValue: 2)!, type: .special, menu: menus))
                     }
                     
-                    if FoodDataDate(rawValue: 3) == today {
-                        let menu1 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(\(3) > ul > li:nth-child(\(1)")
-                        let menu2 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(\(4) > ul > li:nth-child(\(2)")
+                    if 3 == today {
+                        let menu1 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(3) > ul > li:nth-child(1)")
+                        let menu2 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(3) > ul > li:nth-child(2)")
                         menus.append(try! menu1.text())
                         menus.append(try! menu2.text())
                         self.container.append(.init(date: .init(rawValue: 3)!, type: .special, menu: menus))
                     }
-                    
-                    if FoodDataDate(rawValue: 4) == today {
-                        let menu1 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(\(4) > ul > li:nth-child(\(1)")
-                        let menu2 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(\(4) > ul > li:nth-child(\(2)")
+                    if 4 == today {
+                        let menu1 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(4) > ul > li:nth-child(1)")
+                        let menu2 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(4) > ul > li:nth-child(2)")
                         menus.append(try! menu1.text())
                         menus.append(try! menu2.text())
                         self.container.append(.init(date: .init(rawValue: 4)!, type: .special, menu: menus))
                     }
-                    
-                    if FoodDataDate(rawValue: 5) == today {
-                        let menu1 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(\(5) > ul > li:nth-child(\(1)")
-                        let menu2 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(\(5) > ul > li:nth-child(\(2)")
+                    if 5 == today {
+                        let menu1 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(5) > ul > li:nth-child(1)")
+                        let menu2 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(5) > ul > li:nth-child(2)")
                         menus.append(try! menu1.text())
                         menus.append(try! menu2.text())
                         self.container.append(.init(date: .init(rawValue: 5)!, type: .special, menu: menus))
                     }
-                    
-                    if FoodDataDate(rawValue: 6) == today {
-                        let menu1 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(\(6) > ul > li:nth-child(\(1)")
-                        let menu2 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(\(6) > ul > li:nth-child(\(2)")
+                    if 6 == today {
+                        let menu1 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(6) > ul > li:nth-child(1)")
+                        let menu2 = try! doc.select("#_foodView_WAR_foodportlet_tab_2 > div.box.tables-board-wrap > table > tbody > tr:nth-child(2) > td:nth-child(6) > ul > li:nth-child(2)")
                         menus.append(try! menu1.text())
                         menus.append(try! menu2.text())
                         self.container.append(.init(date: .init(rawValue: 6)!, type: .special, menu: menus))
                     }
-                    
                 }
             }
         }
-        print(TodayTableArr)
+        //print(TodayTableArr)
         tableView2.reloadData()
-
         struct FoodData: Codable {
             let date: FoodDataDate
             let type: FoodDataType
@@ -394,23 +316,24 @@ class ViewController : UIViewController {
                 self.menu = menu
             }
         }
-
+        
         enum Restaurant: String, Codable {
             case res12 = "re12"
             case res13 = "re13"
         }
-
+        
         enum FoodDataDate: Int, Codable {
             case mon = 2
             case tue = 3
             case wed = 4
             case thr = 5
             case fri = 6
+            case sat = 7
+            case sun = 1
             
             func stringfy() -> String {
                 var date = "오늘의"
                 switch(self) {
-                    
                 case .mon:
                     date = "월요일"
                 case .tue:
@@ -421,84 +344,34 @@ class ViewController : UIViewController {
                     date = "목요일"
                 case .fri:
                     date = "금요일"
+                case .sat:
+                    date = "토요일"
+                case .sun:
+                    date = "일요일"
                 }
-                
+            
                 return "\(date) 식단"
             }
         }
-
+        
         enum FoodDataType: Codable {
             case special
-            
             func stringfy() -> String {
                 switch(self) {
-                    
                 case .special:
                     return "[특식]"
                 }
             }
         }
-
         var container = FoodDataContainer.init(container: [])
         Task {
             await container.load(.res13)
         }
-        
-        
-        
-        /*
-         //휴아봇 학식 데이터 크롤링
-         @objc private func crawling() {
-         let url = "https://prod.backend.hyuabot.app/rest/cafeteria/campus/2/restaurant/13/" // 창의인재원식당, 나머지 식당은 방학이라 메뉴 데이터 없음
-         
-         var exist : [String] = []
-         
-         AF.request(url).responseString(encoding: .utf8) { [self] response in
-         switch response.result {
-         case .success(let html):
-         date.calendar = Calendar.current
-         date.hour = 11
-         date.minute = 10
-         for i in MenuTable {
-         if html.contains(i) {
-         exist.append(i)
-         if exist.count != 0 {
-         print("Food Found: \(exist)")
-         let content = UNMutableNotificationContent()
-         content.title = "학식 알림"
-         content.body = "\(exist) 메뉴가 나옵니다!"
-         content.sound = .default
-         content.badge = 1
-         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
-         let request = UNNotificationRequest(identifier: "MenuAlarm", content: content, trigger: trigger)
-         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-         }
-         }
-         if exist.count == 0 {
-         print("Food Not Found")
-         let content = UNMutableNotificationContent()
-         content.title = "학식 알림"
-         content.body = "오늘은 관심 메뉴가 나오지 않습니다!"
-         content.sound = .default
-         content.badge = 1
-         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
-         let request = UNNotificationRequest(identifier: "MenuAlarm", content: content, trigger: trigger)
-         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-         }
-         }
-         case .failure(let error):
-         print("Error fetching data: \(error.localizedDescription)")
-         }
-         }
-         }
-         */
     }
+    
 }
 
-
-
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == tableView1 {
             return MenuTableArr.count
@@ -529,7 +402,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
-
 
 extension String {
     func contains(_ strings: [String]) -> Bool {

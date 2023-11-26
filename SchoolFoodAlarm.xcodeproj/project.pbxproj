@@ -22,10 +22,6 @@
 		D5EA7A2B2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2A2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift */; };
 		D5EA7A2D2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */; };
 		D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A7D2A717EEB007A4727 /* Extension.swift */; };
-		D5EA7A842A71977C007A4727 /* PushSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A832A71977C007A4727 /* PushSettingVC.swift */; };
-		D5EA7A882A724B3F007A4727 /* PushNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A872A724B3F007A4727 /* PushNotificationHelper.swift */; };
-		D5EA7A8A2A724C3D007A4727 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA7A892A724C3D007A4727 /* LocalNotificationHelper.swift */; };
-		EE6106D92A721F9100CF45DF /* FoodDataSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6106D82A721F9100CF45DF /* FoodDataSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +50,7 @@
 		8F9C1BF78712E1E55BB5CD42 /* Pods-SchoolFoodAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarm/Pods-SchoolFoodAlarm.debug.xcconfig"; sourceTree = "<group>"; };
 		CF31127BE9BDDFDF500A3B08 /* Pods-SchoolFoodAlarmUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolFoodAlarmUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolFoodAlarmUITests/Pods-SchoolFoodAlarmUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5A766F12B092F9300F57CB7 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
+		D5C853982B09F0A1007372F3 /* SchoolFoodAlarm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchoolFoodAlarm.entitlements; sourceTree = "<group>"; };
 		D5E348EB2A973638009BE79A /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		D5EA7A062A6F6586007A4727 /* SchoolFoodAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolFoodAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EA7A092A6F6586007A4727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,10 +66,6 @@
 		D5EA7A2A2A6F6587007A4727 /* SchoolFoodAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITests.swift; sourceTree = "<group>"; };
 		D5EA7A2C2A6F6587007A4727 /* SchoolFoodAlarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolFoodAlarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D5EA7A7D2A717EEB007A4727 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		D5EA7A832A71977C007A4727 /* PushSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSettingVC.swift; sourceTree = "<group>"; };
-		D5EA7A872A724B3F007A4727 /* PushNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationHelper.swift; sourceTree = "<group>"; };
-		D5EA7A892A724C3D007A4727 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
-		EE6106D82A721F9100CF45DF /* FoodDataSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDataSession.swift; sourceTree = "<group>"; };
 		F80B64361211E0A6B94693D3 /* Pods_SchoolFoodAlarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5742250C02737AE3741AD7 /* Pods_SchoolFoodAlarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolFoodAlarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,8 +133,7 @@
 		D5EA7A082A6F6586007A4727 /* SchoolFoodAlarm */ = {
 			isa = PBXGroup;
 			children = (
-				D5EA7A8D2A725126007A4727 /* PushNotification */,
-				D5EA7A7F2A719728007A4727 /* PushSetting */,
+				D5C853982B09F0A1007372F3 /* SchoolFoodAlarm.entitlements */,
 				D5EA7A392A6F6596007A4727 /* Home */,
 				D5EA7A092A6F6586007A4727 /* AppDelegate.swift */,
 				D5EA7A0B2A6F6586007A4727 /* SceneDelegate.swift */,
@@ -185,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				D5EA7A0D2A6F6586007A4727 /* ViewController.swift */,
-				EE6106D82A721F9100CF45DF /* FoodDataSession.swift */,
 				D5E348EB2A973638009BE79A /* MenuTableViewCell.swift */,
 				D5A766F12B092F9300F57CB7 /* TodayTableViewCell.swift */,
 			);
@@ -204,47 +195,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D5EA7A7F2A719728007A4727 /* PushSetting */ = {
-			isa = PBXGroup;
-			children = (
-				D5EA7A822A71974E007A4727 /* Model */,
-				D5EA7A812A719744007A4727 /* View */,
-				D5EA7A802A71973A007A4727 /* Controller */,
-			);
-			path = PushSetting;
-			sourceTree = "<group>";
-		};
-		D5EA7A802A71973A007A4727 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D5EA7A832A71977C007A4727 /* PushSettingVC.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		D5EA7A812A719744007A4727 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D5EA7A822A71974E007A4727 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D5EA7A8D2A725126007A4727 /* PushNotification */ = {
-			isa = PBXGroup;
-			children = (
-				D5EA7A872A724B3F007A4727 /* PushNotificationHelper.swift */,
-				D5EA7A892A724C3D007A4727 /* LocalNotificationHelper.swift */,
-			);
-			path = PushNotification;
 			sourceTree = "<group>";
 		};
 		E82AC5F21D3373661E9601C5 /* Pods */ = {
@@ -590,13 +540,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EA7A882A724B3F007A4727 /* PushNotificationHelper.swift in Sources */,
 				D5EA7A0E2A6F6586007A4727 /* ViewController.swift in Sources */,
-				D5EA7A8A2A724C3D007A4727 /* LocalNotificationHelper.swift in Sources */,
 				D5EA7A0A2A6F6586007A4727 /* AppDelegate.swift in Sources */,
-				EE6106D92A721F9100CF45DF /* FoodDataSession.swift in Sources */,
 				D5E348EC2A973638009BE79A /* MenuTableViewCell.swift in Sources */,
-				D5EA7A842A71977C007A4727 /* PushSettingVC.swift in Sources */,
 				D5EA7A0C2A6F6586007A4727 /* SceneDelegate.swift in Sources */,
 				D5EA7A7E2A717EEB007A4727 /* Extension.swift in Sources */,
 				D5A766F22B092F9300F57CB7 /* TodayTableViewCell.swift in Sources */,
@@ -775,6 +721,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SchoolFoodAlarm/SchoolFoodAlarm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7AADKZ956W;
@@ -804,6 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SchoolFoodAlarm/SchoolFoodAlarm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7AADKZ956W;

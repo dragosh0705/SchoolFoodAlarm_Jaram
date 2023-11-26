@@ -11,49 +11,42 @@ import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
+    
+        
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-            // Override point for customization after application launch.
-            if #available(iOS 11.0, *) {
-                        // 경고창 배지 사운드를 사용하는 알림 환경 정보를 생성하고, 사용자 동의여부 창을 실행
-                        let notiCenter =  UNUserNotificationCenter.current()
-                        notiCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (didAllow, e) in }
-                        notiCenter.delegate = self // 이 코드는 사용자가 알림을 클릭하여 들어온 이벤트를 전달받기 위한 델리게이트 패턴구조
-                        // 즉, 알림 센터와 관련하여 뭔가 사건이 발생하면 나(앱 델리게이트) 한테 알려줘 이런 의미임
-                        /* 클로저 매개변수 설명
-                         사용자가 메시지 창의 알림 동의 여부를 true / false
-                         오류 발생시 사용하는 오류 발생 타입의 매개변수 e
-                         */
-                    } else {
-                        // 경고창, 배지, 사운드를 사용하는 알림 환경 정보를 생성하고, 이를 애플리케이션에 저장.
-                        let setting = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-                        application.registerUserNotificationSettings(setting) // 생성된 정보 애플리케이션에 등록
-                    }
-            return true
-        }
-    
-    @available(iOS 10.0, *)
-          func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-              if notification.request.identifier == "wakeup" { // 로컬 알림 등록시 입력한 식별 아이디를 읽어오는 속성
-                  let userInfo = notification.request.content.userInfo // 유저가 커스텀으로 정의한 정보를 읽어오는 역할
-                  print(userInfo["name"]!) // 딕셔너리 값을 출력
-              }
-              // 알림 배너 띄워주기
-              completionHandler([.alert, .badge, .sound])
-          }
-    
-    @available(iOS 10.0, *)
-        func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-            /*
-             앞에서와 비슷하지만, 이 메소드는 실제로 사용자가 알림 메시지를 클릭 했을 경우에 실행된다는 차이를 가짐.
-             이떄 알림 메시지에 대한 정보는 모두 위 메소드의 두번쨰 인자값인 response 매개변수에 담겨 전달됩니다.
-             */
-            
-            if response.notification.request.identifier == "wakeup" {
-                let userInfo = response.notification.request.content.userInfo
-                print(userInfo["name"]!)
-            }
-            completionHandler()
-        }
+        registerForPushNotifications()
+        return true
+    }
 
+    func registerForPushNotifications() {
+        // 1 - UNUserNotificationCenter는 푸시 알림을 포함하여 앱의 모든 알림 관련 활동을 처리합니다.
+        UNUserNotificationCenter.current()
+        // 2 -알림을 표시하기 위한 승인을 요청합니다. 전달된 옵션은 앱에서 사용하려는 알림 유형을 나타냅니다. 여기에서 알림(alert), 소리(sound) 및 배지(badge)를 요청합니다.
+            .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+                // 3 - 완료 핸들러는 인증이 성공했는지 여부를 나타내는 Bool을 수신합니다. 인증 결과를 표시합니다.
+                print("Permission granted: \(granted)")
+                guard granted else { return }
+                self.getNotificationSettings()
+            }
+    }
+    func getNotificationSettings() {
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            guard settings.authorizationStatus == .authorized else { return }
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let token = tokenParts.joined()
+        print("Device Token: \(token)")
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register: \(error)")
+    }
 
 }

@@ -2,14 +2,12 @@ import Foundation
 import UIKit
 
 class MenuTableViewCell: UITableViewCell {
-    
     private let MenuLabel: UILabel = {
         var label = UILabel()
         label.text = MenuTableArr[0]
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     
     private func setConstraint() {
         contentView.addSubview(MenuLabel)

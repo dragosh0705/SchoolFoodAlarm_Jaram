@@ -9,14 +9,12 @@ import Foundation
 import UIKit
 
 class TodayTableViewCell: UITableViewCell {
-    
     private let MenuLabel: UILabel = {
         var label = UILabel()
         label.text = TodayTableArr[0]
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     
     private func setConstraint() {
         contentView.addSubview(MenuLabel)
